@@ -16,7 +16,7 @@ body {
 /* Header */
 header {
   background: F2DF3A;
-  color: #fff;
+  color: F2DF3A;
   padding: 15px 40px;
   position: fixed;
   width: 100%;
@@ -198,4 +198,5 @@ footer {
   from { transform: translateY(50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
 
