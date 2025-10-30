@@ -39,7 +39,7 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #F2DF3A;
+  color: #F6F6F6;
 }
 
 .nav-links {
@@ -201,3 +201,4 @@ footer {
   from { transform: translateY(50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
