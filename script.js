@@ -1,35 +1,33 @@
-// Contact Form Validation
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const formMessage = document.getElementById("formMessage");
-
-  if (name === "" || email === "" || message === "") {
-    formMessage.textContent = "Please fill out all fields.";
-    formMessage.style.color = "red";
-  } else if (!email.includes("@")) {
-    formMessage.textContent = "Please enter a valid email address.";
-    formMessage.style.color = "red";
-  } else {
-    formMessage.textContent = "Message sent successfully!";
-    formMessage.style.color = "green";
-    document.getElementById("contactForm").reset();
-  }
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+const reveals = $$('.reveal');
+const showOnScroll = () =>{
+const trigger = window.innerHeight * 0.85;
+reveals.forEach(el => {
+const rect = el.getBoundingClientRect();
+if(rect.top < trigger) el.classList.add('show');
 });
+}
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', ()=>{ showOnScroll(); document.getElementById('year').textContent = new Date().getFullYear(); });
 
-// Scroll Reveal Animation
-const hiddenElements = document.querySelectorAll(".hidden, .project-card");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+const profile = $('#profile');
+profile.addEventListener('mousemove', e => {
+const r = profile.getBoundingClientRect();
+const x = (e.clientX - r.left) - r.width/2;
+const y = (e.clientY - r.top) - r.height/2;
+profile.style.transform = `translateY(-6px) rotateX(${ -y/18 }deg) rotateY(${ x/22 }deg)`;
+});
+profile.addEventListener('mouseleave', ()=>{ profile.style.transform = '' });
 
-hiddenElements.forEach(el => observer.observe(el));
+
+document.getElementById('downloadBtn').addEventListener('click', ()=>{
+const txt = `Your Name\nWeb Developer\nEmail: you@example.com\nPortfolio: yoursite.example`;
+const blob = new Blob([txt], {type:'text/plain'});
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a'); a.href = url; a.download = 'resume.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+});
+$('#profileImg').addEventListener('keydown', (e)=>{
+if(e.key === 'Enter' || e.key === ' ') window.open($('#profileImg').src, '_blank');
+});
