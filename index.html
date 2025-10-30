@@ -1,88 +1,45 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Judy Ann's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <nav>
-      <h1 class="logo">JUDY ANN U. CAÑEDO </h1>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<div class="chip">CSS / Animations</div>
+<div class="chip">JavaScript</div>
+<div class="chip">React</div>
+<div class="chip">Figma</div>
+</div>
 
-  <!-- Hero Section -->
-<section id="home" class="hero fade-in">
-  <div class="hero-content">
-    <div class="hero-text slide-up">
-      <h2>Hi, I'm <span>Your Name</span></h2>
-      <p>Web Developer | Designer | Tech Enthusiast</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-    <div class="hero-image slide-up">
-      <img src="img.jpg" alt="My Photo">
-    </div>
-  </div>
+
+<div class="meta reveal">
+<div class="about">
+<strong>Selected Projects</strong>
+<div class="projects" id="projects">
+<article class="card reveal">
+<h3 class="proj-title">E‑commerce UI</h3>
+<p class="proj-desc">Performance-first product catalog with smooth add-to-cart micro-interactions.</p>
+</article>
+<article class="card reveal">
+<h3 class="proj-title">SaaS Dashboard</h3>
+<p class="proj-desc">Data-driven interfaces with custom charts and responsive layout.</p>
+</article>
+<article class="card reveal">
+<h3 class="proj-title">Portfolio CMS</h3>
+<p class="proj-desc">A content-focused portfolio powered by a lightweight CMS for creators.</p>
+</article>
+</div>
+</div>
+
+
+<div class="contact" id="contact">
+<div style="font-weight:700">Let's build something together</div>
+<div style="font-size:.95rem;color:rgba(11,26,31,0.7)">Email: <a href="mailto:you@example.com">you@example.com</a></div>
+<button id="downloadBtn">Download Resume</button>
+</div>
+</div>
 </section>
+</main>
 
 
-  <!-- About Section -->
-  <section id="about" class="about hidden">
-    <h2>About Me</h2>
-    <p>
-      I'm a passionate developer who loves creating beautiful and functional web experiences.
-      I enjoy blending creativity with technical skills to bring ideas to life.
-    </p>
-  </section>
+<footer>© <span id="year"></span> Your Name — Crafted with <span style="color:var(--primary)">care</span></footer>
+</div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects hidden">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Project One</h3>
-        <p>Brief description of your project.</p>
-      </div>
-      <div class="project-card">
-        <h3>Project Two</h3>
-        <p>Brief description of your project.</p>
-      </div>
-      <div class="project-card">
-        <h3>Project Three</h3>
-        <p>Brief description of your project.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact hidden">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <p id="formMessage"></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Your Name. All Rights Reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
