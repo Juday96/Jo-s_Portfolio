@@ -316,3 +316,50 @@ footer {
   max-width: 700px;
   margin: 0 auto;
 }
+.graphic-design-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.graphic-design-section .capstone-img {
+  width: 100%;          /* fit image to div width */
+  height: auto;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+.graphic-design-section .capstone-text h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #0078AA;
+}
+
+.graphic-design-section .capstone-text p {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.graphic-design-section .capstone-text a {
+  color: #3AB4F2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.graphic-design-section .capstone-text a:hover {
+  color: #0078AA;
+  text-decoration: underline;
+}
+
+
