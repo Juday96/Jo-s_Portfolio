@@ -327,7 +327,7 @@ footer {
   overflow: hidden;
 }
 
-.graphic-design-section .capstone-img {
+.graphic-design-section .graphic-design-img {
   width: 100%;          /* fit image to div width */
   height: auto;
   border-radius: 15px;
@@ -336,13 +336,13 @@ footer {
   object-fit: cover;
 }
 
-.graphic-design-section .capstone-text h3 {
+.graphic-design-section .graphic-design-text h3 {
   font-size: 28px;
   margin-bottom: 10px;
   color: #0078AA;
 }
 
-.graphic-design-section .capstone-text p {
+.graphic-design-section .graphic-design-text p {
   font-size: 17px;
   color: #333;
   line-height: 1.6;
@@ -350,16 +350,14 @@ footer {
   margin: 0 auto;
 }
 
-.graphic-design-section .capstone-text a {
+.graphic-design-section .graphic-design-text a {
   color: #3AB4F2;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.graphic-design-section .capstone-text a:hover {
+.graphic-design-section .graphic-design-text a:hover {
   color: #0078AA;
   text-decoration: underline;
 }
-
-
