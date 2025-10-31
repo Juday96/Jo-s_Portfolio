@@ -284,35 +284,34 @@ footer {
   }
 }
 .capstone-section {
-  text-align: center;
-  margin: 40px auto;
-  max-width: 800px;
-}
-
-.capstone-img {
+  position: relative;
   width: 100%;
-  max-width: 350px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
-}
-
-.capstone-content {
+  height: 400px; /* adjust height as needed */
+  background: url('images/gradeease.png') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  color: #fff; /* makes text readable */
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.capstone-text {
-  max-width: 400px;
-  text-align: left;
+.capstone-section .overlay {
+  background: rgba(0, 0, 0, 0.5); /* dark transparent layer for readability */
+  padding: 40px;
+  border-radius: 20px;
 }
 
+.capstone-section h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
 
-
-
-
-
-
+.capstone-section p {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+}
