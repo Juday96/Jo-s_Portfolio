@@ -287,31 +287,42 @@ footer {
   position: relative;
   width: 100%;
   height: 400px; /* adjust height as needed */
-  background: url('images/gradeease.png') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff; /* makes text readable */
-  text-align: center;
-  border-radius: 20px;
   overflow: hidden;
+  border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.capstone-section .overlay {
-  background: rgba(0, 0, 0, 0.5); /* dark transparent layer for readability */
-  padding: 40px;
-  border-radius: 20px;
+.capstone-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image fills the div */
+  z-index: 1;
 }
 
-.capstone-section h3 {
+.capstone-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* slight overlay for readability */
+  padding: 40px;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 700px;
+}
+
+.capstone-text h3 {
   font-size: 28px;
   margin-bottom: 10px;
 }
 
-.capstone-section p {
+.capstone-text p {
   font-size: 16px;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
+  line-height: 1.6;
 }
