@@ -285,51 +285,34 @@ footer {
 }
 .capstone-section {
   text-align: center;
-  padding: 50px 20px;
-  background-color: #f6f6f6;
+  padding: 40px 20px;
+  background-color: #f6f6f6; /* light background */
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   max-width: 900px;
-  margin: 50px auto;
+  margin: 40px auto;
+  overflow: hidden;
 }
 
 .capstone-img {
-  width: 500px; /* 🔹 increased image size */
-  height: auto;
-  border-radius: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.capstone-img:hover {
-  transform: scale(1.03); /* subtle zoom effect */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  width: 100%;        /* 🔹 Image now fits full width of the section */
+  height: auto;       /* keeps proper aspect ratio */
+  border-radius: 15px;
+  margin-bottom: 20px;
+  object-fit: cover;  /* ensures the image fills without distortion */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .capstone-text h3 {
   font-size: 28px;
-  margin-bottom: 6px;
-  color: #0078AA;
+  margin-bottom: 12px;
+  color: #0078AA; /* your palette */
 }
 
 .capstone-text p {
   font-size: 17px;
   color: #333;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
-
-.capstone-text a {
-  color: #3AB4F2;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.capstone-text a:hover {
-  color: #0078AA;
-  text-decoration: underline;
-}
-
