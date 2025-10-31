@@ -198,11 +198,12 @@ footer {
   from { transform: translateY(50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F6F6F6; /* optional background */
+  background-color: #F6F6F6;
   padding: 80px 10%;
   min-height: 100vh;
 }
@@ -251,17 +252,17 @@ footer {
   color: #fff;
 }
 
-/* Image style */
+/* Right-side image */
 .hero-image img {
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid #3AB4F2;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive for mobile */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column-reverse;
@@ -273,5 +274,6 @@ footer {
     height: 180px;
   }
 }
+
 
 
