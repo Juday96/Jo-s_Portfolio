@@ -309,7 +309,7 @@ footer {
 
 .capstone-text h3 {
   font-size: 28px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   color: #0078AA;
 }
 
@@ -317,7 +317,7 @@ footer {
   font-size: 17px;
   color: #333;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -332,3 +332,4 @@ footer {
   color: #0078AA;
   text-decoration: underline;
 }
+
