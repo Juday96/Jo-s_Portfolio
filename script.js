@@ -86,13 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
       index = (index - 1 + totalImages) % totalImages;
       showImage(index);
     });
-
-    // Optional auto-slide
-    setInterval(() => {
-      index = (index + 1) % totalImages;
-      showImage(index);
-    }, 5000);
   });
 });
+
 
 
