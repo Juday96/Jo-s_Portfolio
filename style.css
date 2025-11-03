@@ -16,7 +16,7 @@ body {
 /* Header */
 header {
   width: 100%;
-  background-color: #0078AA;
+  background: linear-gradient(to right, #00bcd4, #2196f3);
   color: #fff;
   position: fixed;
   top: 0;
@@ -238,3 +238,4 @@ footer {
     justify-content: center;
   }
 }
+
