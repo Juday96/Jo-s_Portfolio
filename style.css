@@ -36,28 +36,61 @@ header {
   font-weight: bold;
 }
 
+/* --- Responsive Navbar Menu Enhancement --- */
+
+/* Hide menu toggle on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Base nav-links for desktop */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s;
+/* For smaller screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 50px;
+    background-color: #0078AA;
+    border-radius: 10px;
+    padding: 20px;
+    width: 180px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    text-align: right;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
 }
 
-.nav-links a:hover {
-  color: #F2DF3A;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
 
 /* Hero Section */
 .hero {
@@ -275,6 +308,7 @@ footer {
     justify-content: center;
   }
 }
+
 
 
 
