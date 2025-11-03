@@ -312,6 +312,44 @@ footer {
   margin-bottom: 20px;
   line-height: 1.8;
 }
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.about-image img {
+  width: 180px; /* adjust size as needed */
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #3AB4F2;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect (optional) */
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .about-image img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 
 
 
