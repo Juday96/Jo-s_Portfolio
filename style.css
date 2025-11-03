@@ -91,13 +91,50 @@ header {
   margin-bottom: 20px;
 }
 
+/* Hero Image (right-side) */
 .hero-image img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 380px;
+  height: 380px;
   object-fit: cover;
-  border: 5px solid #F2DF3A;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: 6px solid var(--secondary); /* uses your palette color #3AB4F2 */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-image img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image img {
+    width: 240px;
+    height: 240px;
+    margin-top: 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
 }
 
 .btn {
@@ -238,4 +275,5 @@ footer {
     justify-content: center;
   }
 }
+
 
