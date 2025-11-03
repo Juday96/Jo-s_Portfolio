@@ -1,39 +1,27 @@
-/* Base Styles */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background: #f8f9fa;
-  color: #333;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* Header */
 header {
-  background: #0078AA;
-  color: #fff;
-  padding: 15px 40px;
-  position: fixed;
   width: 100%;
+  background-color: #0078AA;
+  color: #fff;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 100;
-  animation: slideDown 1s ease;
 }
 
-@keyframes slideDown {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
-}
-
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 50px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .logo {
@@ -44,18 +32,76 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-.nav-links a {
-  color: white;
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #00bcd4;
+.nav-links li a:hover {
+  color: #F2DF3A;
 }
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: #0078AA;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-links.open {
+    max-height: 300px; /* expands on toggle */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    padding: 15px 25px;
+  }
+}
+
+/* Animation for hamburger toggle */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
 
 /* Hero Section */
 .hero {
@@ -361,3 +407,4 @@ footer {
   color: #0078AA;
   text-decoration: underline;
 }
+
