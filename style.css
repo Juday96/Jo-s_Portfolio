@@ -320,43 +320,32 @@ footer {
 }
 
 .about-image img {
-  width: 180px; /* adjust size as needed */
-  height: 180px;
+  width: 220px; /* increased from 180px */
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #3AB4F2;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border: 6px solid #F2DF3A;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Hover effect (optional) */
 .about-image img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.3);
 }
 
-/* Make it responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .about-image img {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
   .about-image img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
