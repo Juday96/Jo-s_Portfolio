@@ -62,7 +62,7 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// Carousel Functionality
+// Carousel Functionality (Manual Only with Smooth Infinite Loop)
 document.addEventListener("DOMContentLoaded", () => {
   const carousels = document.querySelectorAll('.carousel');
 
@@ -70,24 +70,60 @@ document.addEventListener("DOMContentLoaded", () => {
     const images = carousel.querySelector('.carousel-images');
     const prevBtn = carousel.querySelector('.prev');
     const nextBtn = carousel.querySelector('.next');
-    const totalImages = images.children.length;
+    let slides = images.children;
+    const totalImages = slides.length;
     let index = 0;
 
-    function showImage(i) {
-      images.style.transform = `translateX(${-i * 100}%)`;
+    // Clone first and last image for smooth infinite effect
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[totalImages - 1].cloneNode(true);
+
+    images.appendChild(firstClone);
+    images.insertBefore(lastClone, slides[0]);
+
+    // Update slides after cloning
+    slides = images.children;
+
+    let currentIndex = 1; // Start from the actual first image
+    const imageWidth = 100; // % width for transform
+    images.style.transform = `translateX(-${currentIndex * imageWidth}%)`;
+
+    // Function to show image by index
+    function showImage() {
+      images.style.transition = "transform 0.5s ease-in-out";
+      images.style.transform = `translateX(-${currentIndex * imageWidth}%)`;
     }
 
+    // Handle next button
     nextBtn.addEventListener('click', () => {
-      index = (index + 1) % totalImages;
-      showImage(index);
+      if (currentIndex >= slides.length - 1) return; // stop while animating
+      currentIndex++;
+      showImage();
     });
 
+    // Handle previous button
     prevBtn.addEventListener('click', () => {
-      index = (index - 1 + totalImages) % totalImages;
-      showImage(index);
+      if (currentIndex <= 0) return; // stop while animating
+      currentIndex--;
+      showImage();
+    });
+
+    // Reset position instantly after transition ends (for infinite loop)
+    images.addEventListener('transitionend', () => {
+      if (slides[currentIndex].isSameNode(firstClone)) {
+        images.style.transition = "none";
+        currentIndex = 1;
+        images.style.transform = `translateX(-${currentIndex * imageWidth}%)`;
+      }
+      if (slides[currentIndex].isSameNode(lastClone)) {
+        images.style.transition = "none";
+        currentIndex = slides.length - 2;
+        images.style.transform = `translateX(-${currentIndex * imageWidth}%)`;
+      }
     });
   });
 });
+
 
 
 
