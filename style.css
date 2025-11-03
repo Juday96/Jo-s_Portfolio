@@ -351,7 +351,6 @@ footer {
 }
 
 /* Projects Section */
-/* --- Projects Section --- */
 .projects {
   padding: 60px 20px;
   background: #f6f6f6;
@@ -373,30 +372,93 @@ footer {
 }
 
 /* --- Project Card --- */
+.projects-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.projects-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projects-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
 .project-card {
   background: #fff;
   border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  flex: 0 0 300px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures the image fits perfectly */
+  border-radius: 10px;
 }
 
-.project-card h3 {
-  color: #333;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+.prev-btn,
+.next-btn {
+  background-color: #0078aa;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.project-card p {
-  color: #555;
-  font-size: 0.95rem;
-  margin-top: 10px;
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #005f80;
+}
+
+.prev-btn {
+  left: -20px;
+}
+
+.next-btn {
+  right: -20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .project-card {
+    flex: 0 0 80%;
+  }
+
+  .prev-btn,
+  .next-btn {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    flex: 0 0 100%;
+  }
 }
 
 /* --- Carousel Container --- */
@@ -493,3 +555,4 @@ footer {
     padding: 5px 8px;
   }
 }
+
