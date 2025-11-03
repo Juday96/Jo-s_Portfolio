@@ -54,11 +54,18 @@ const observer = new IntersectionObserver(
 
 hiddenElements.forEach((el) => observer.observe(el));
 
-// Responsive Hamburger Menu
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+// --- Responsive Hamburger Menu ---
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("open");
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
+
+// Optional: close menu after clicking a link (mobile only)
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
