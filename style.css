@@ -324,7 +324,7 @@ footer {
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  border: 6px solid #F2DF3A;
+  border: 6px solid #0078AA;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -349,3 +349,4 @@ footer {
     height: 150px;
   }
 }
+
