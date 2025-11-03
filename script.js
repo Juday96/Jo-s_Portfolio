@@ -61,5 +61,38 @@ const navLinks = document.querySelector(".nav-links");
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
+// Carousel Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll('.carousel');
+
+  carousels.forEach(carousel => {
+    const images = carousel.querySelector('.carousel-images');
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+    const totalImages = images.children.length;
+    let index = 0;
+
+    function showImage(i) {
+      images.style.transform = `translateX(${-i * 100}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % totalImages;
+      showImage(index);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + totalImages) % totalImages;
+      showImage(index);
+    });
+
+    // Optional auto-slide
+    setInterval(() => {
+      index = (index + 1) % totalImages;
+      showImage(index);
+    }, 5000);
+  });
+});
+
 
 
