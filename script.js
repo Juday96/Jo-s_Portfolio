@@ -1,6 +1,6 @@
 // Initialize Supabase client
 const SUPABASE_URL = "https://bvcnrtzdokpbtviltfrm.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2Y25ydHpkb2twYnR2aWx0ZnJtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE4NDY2ODIsImV4cCI6MjA3NzQyMjY4Mn0.712wd-PfOJujCzftT6nfT-hg2E69eyaXZFW8kBapDSA";
+const SUPABASE_KEY = "YOUR_PUBLIC_ANON_KEY"; // Replace with your anon key
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // Handle form submission
@@ -12,7 +12,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
   const message = document.getElementById("message").value.trim();
   const formMessage = document.getElementById("formMessage");
 
-  if (name === "" || email === "" || message === "") {
+  if (!name || !email || !message) {
     formMessage.textContent = "Please fill out all fields.";
     formMessage.style.color = "red";
     return;
@@ -24,10 +24,8 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     return;
   }
 
-  // Insert into Supabase
-  const { data, error } = await supabase.from("messages").insert([
-    { name, email, message }
-  ]);
+  // Insert into Supabase table 'messages'
+  const { data, error } = await supabase.from("messages").insert([{ name, email, message }]);
 
   if (error) {
     console.error("Supabase insert error:", error);
@@ -40,16 +38,27 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
   }
 });
 
-// Scroll Reveal Animation (unchanged)
+// Scroll Reveal Animation
 const hiddenElements = document.querySelectorAll(".hidden, .project-card");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+hiddenElements.forEach((el) => observer.observe(el));
 
-hiddenElements.forEach(el => observer.observe(el));
+// Responsive Hamburger Menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("open");
+});
