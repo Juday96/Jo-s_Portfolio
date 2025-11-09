@@ -140,11 +140,11 @@ header {
 .hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #FFF7DD;
+  color: #91C4C3;
 }
 
 .hero-text span {
-  color: #91C4C3;
+  color: #FFF7DD;
 }
 
 .hero-text p {
@@ -547,6 +547,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
