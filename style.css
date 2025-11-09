@@ -98,7 +98,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 150px 50px 100px;
- background: linear-gradient(to right, #3AB4F2, #ace0e6);
+ background: linear-gradient(to right, #FFF1CB, #ace0e6);
   color: #fff;
 }
 
@@ -562,6 +562,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
