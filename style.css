@@ -17,7 +17,7 @@ body {
 header {
   width: 100%;
   background-color: #91C4C3;
-  color: #fff;
+  color: #80A1BA;
   position: fixed;
   top: 0;
   left: 0;
@@ -547,6 +547,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
