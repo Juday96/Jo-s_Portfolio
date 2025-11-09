@@ -180,6 +180,21 @@ section h2 {
   color: #0078AA;
   margin-bottom: 20px;
 }
+.btn {
+  background-color: #F2DF3A;
+  color: #111;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #0078AA; /* Optional: make hover text match theme */
+}
 
 /* Projects */
 .project-grid {
@@ -547,6 +562,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
