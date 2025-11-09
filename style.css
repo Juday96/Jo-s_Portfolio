@@ -33,7 +33,7 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #050836;
+  color: #2e326e;
 }
 
 /* --- Responsive Navbar Menu Enhancement --- */
@@ -547,6 +547,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
