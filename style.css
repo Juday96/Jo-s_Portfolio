@@ -150,7 +150,7 @@ header {
 .hero-text p {
   font-size: 1.1rem;
   margin-bottom: 20px;
-   color: #00080a;
+   color: white;
 }
 
 /* Hero Image (right-side) */
@@ -563,6 +563,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
