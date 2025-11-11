@@ -86,9 +86,14 @@ header {
   }
 
   .nav-links a {
-    padding: 10px 0;
-    font-size: 1rem;
-  }
+  color: white;
+  text-decoration: none; /* optional: removes underline */
+}
+
+.nav-links a:hover {
+  color: #ddd; /* optional: light gray on hover */
+}
+
 }
 /* Hero Section with Video Background */
 .hero {
@@ -563,6 +568,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
