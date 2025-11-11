@@ -47,6 +47,7 @@ header {
 
 /* Base nav-links for desktop */
 .nav-links {
+  color: white;
   list-style: none;
   display: flex;
   gap: 25px;
@@ -569,6 +570,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
