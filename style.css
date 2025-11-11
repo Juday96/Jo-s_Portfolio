@@ -16,7 +16,7 @@ body {
 /* Header */
 header {
   width: 100%;
-  background-color: #91C4C3;
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2e326e;
+  color: white;
 }
 
 /* --- Responsive Navbar Menu Enhancement --- */
@@ -563,6 +563,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
