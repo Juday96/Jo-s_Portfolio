@@ -120,7 +120,7 @@ header {
   height: 380px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #B4DEBD;
+  border: 6px solid #F2DF3A;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -388,3 +388,4 @@ footer {
     padding: 5px 8px;
   }
 }
+
