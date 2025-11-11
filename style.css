@@ -293,7 +293,7 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #0078AA;
+    background-color: white;
     position: absolute;
     top: 60px;
     right: 0;
@@ -568,6 +568,7 @@ footer {
     padding: 5px 8px;
   }
 }
+
 
 
 
